@@ -174,7 +174,7 @@ void x16rv2_hash(const char* input, char* output)
             sph_tiger_close(&ctx_tiger, (void*) hash);
 
             sph_sha512_init(&ctx_sha512);
-            sph_sha512(&ctx_sha512,(const void*) hash, size);
+            sph_sha512(&ctx_sha512,(const void*) hash, 64);
             sph_sha512_close(&ctx_sha512,(void*) hash);
             break;
         }
