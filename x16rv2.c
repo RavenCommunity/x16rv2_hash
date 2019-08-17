@@ -119,13 +119,21 @@ void x16rv2_hash(const char* input, char* output)
             sph_jh512_close(&ctx_jh, hash);
             break;
             case KECCAK:
+            sph_tiger_init(&ctx_tiger);
+            sph_tiger (&ctx_tiger, (const void*) in, size);
+            sph_tiger_close(&ctx_tiger, (void*) hash);
+
             sph_keccak512_init(&ctx_keccak);
-            sph_keccak512(&ctx_keccak, in, size);
+            sph_keccak512(&ctx_keccak, hash, 24);
             sph_keccak512_close(&ctx_keccak, hash);
             break;
             case LUFFA:
+            sph_tiger_init(&ctx_tiger);
+            sph_tiger (&ctx_tiger, (const void*) in, size);
+            sph_tiger_close(&ctx_tiger, (void*) hash);
+
             sph_luffa512_init(&ctx_luffa);
-            sph_luffa512(&ctx_luffa, in, size);
+            sph_luffa512(&ctx_luffa, hash, 24);
             sph_luffa512_close(&ctx_luffa, hash);
             break;
             case CUBEHASH:
