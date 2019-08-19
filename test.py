@@ -7,9 +7,8 @@ def gennonce(decnonce):
   return str(hexnonce)
 
 #main
-header = 'abcdef12345678'
-while len(header) < 152:
-  header = '00' + header
+#         VERSION PREV BLOCKHASH|
+header = '04000000fedcba9876543210123456789abcdef0031d8f75ade0746ec80b7020000000000f33171b804978ce997aafd70e7daffc44fba61609538b77773e32a9b830a73ea732dd15baa220'
 
 target = "0000ffff00000000000000000000000000000000000000000000000000000000"
 targetbin = binascii.unhexlify(target)
