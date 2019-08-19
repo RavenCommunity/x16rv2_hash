@@ -7,7 +7,7 @@ def gennonce(decnonce):
   return str(hexnonce)
 
 #main
-header = 'abcdef12'
+header = 'abcdef12345678'
 while len(header) < 152:
   header = '00' + header
 

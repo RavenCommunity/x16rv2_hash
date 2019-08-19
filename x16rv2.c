@@ -99,7 +99,6 @@ void x16rv2_hash(const char* input, char* output)
             sph_blake512_close(&ctx_blake, hash);
             break;
             case BMW:
-            printf("Handling bmw\n");
             sph_bmw512_init(&ctx_bmw);
             sph_bmw512(&ctx_bmw, in, size);
             sph_bmw512_close(&ctx_bmw, hash);
