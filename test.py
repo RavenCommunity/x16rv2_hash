@@ -7,11 +7,11 @@ def gennonce(decnonce):
   return str(hexnonce)
 
 #main
-header = '00112233'
+header = 'abcdef12'
 while len(header) < 152:
   header = '00' + header
 
-target = "00000fff00000000000000000000000000000000000000000000000000000000"
+target = "0000ffff00000000000000000000000000000000000000000000000000000000"
 targetbin = binascii.unhexlify(target)
 nonce = 0
 while True:
