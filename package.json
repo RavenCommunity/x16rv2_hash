@@ -1,0 +1,19 @@
+{
+    "name": "node-x16rv2",
+    "version": "1.0.0",
+    "main": "nodex16rv2",
+    "author": {
+        "name": "Traysi Hylian"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/traysi/x16rv2_hash.git"
+    },
+    "dependencies": {
+        "bindings": "^1.3.0",
+        "nan": "^2.6.2"
+    },
+    "keywords": [
+        "x16rv2"
+    ]
+}
