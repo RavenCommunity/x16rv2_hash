@@ -1,4 +1,5 @@
 #include <Python.h>
+ #define PY_SSIZE_T_CLEAN
 
 #include "x16rv2.h"
 
