@@ -23,7 +23,7 @@ sources = ['x16rv2_module.c',
   'sha3/tiger.c'],
   include_dirs=['.', './sha3'])
 
-setup (name = 'x16rvw_hash',
+setup (name = 'x16rv2_hash',
   version = '1.0',
   description = 'Bindings for proof of work used by X16Rv2',
   ext_modules = [x16rv2_hash_module])
